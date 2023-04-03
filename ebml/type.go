@@ -17,14 +17,6 @@ type Unmarshaler interface {
 	UnmarshalEBML(r *Reader) error
 }
 
-// Marshaler is the interface implemented by objects that can marshal themselves into valid EBML.
-// type Marshaler interface {
-// 	MarshalEBML(enc *Encoder) error
-// }
-
-// func marshal(w *Writer, v reflect.Value, opt *EncodeOptions) error {
-// }
-
 func unmarshal(r *Reader, v reflect.Value, opt *DecodeOptions) error {
 	switch v.Kind() {
 	case reflect.Struct:
